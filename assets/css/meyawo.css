@@ -621,7 +621,7 @@ pre code {
   display: block;
   margin: auto;
   width: 90%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   font-family: "Open Sans", sans-serif;
 }
 .image-box{
@@ -663,7 +663,7 @@ pre code {
 .project-last-buttons{
   margin: auto;
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
   
 }
 .project-github-button{
@@ -698,7 +698,7 @@ width: 110px;
 
 }
 .project-body{
-  background-color: rgb(194, 217, 232);
+  background-color: rgb(224, 234, 240);
   border-radius: 10px;
 }
 /* For Desktop View */
@@ -11284,6 +11284,7 @@ p {
   border: 1px solid #dee2e6;
   overflow: hidden;
   border-radius: 3px;
+  text-align: center;
 }
 
 .service-card .body {
@@ -11338,10 +11339,13 @@ p {
   display: block;
   position: relative;
   overflow: hidden;
+  padding: 10px;
+ 
 }
 
 .portfolio-card .portfolio-card-img {
   width: 100%;
+  margin-top: 15px;
 }
 
 /* .portfolio-card .portfolio-card-overlay {
@@ -11400,10 +11404,19 @@ p {
 }
 
 /* Pricing card */
+.footer{
+ justify-content: center;
+}
+.fa-solid{
+  color: black;
+
+}
 .pricing-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  border: none;
+  outline: auto;
   display: flex;
 }
 
