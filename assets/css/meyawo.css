@@ -616,6 +616,153 @@ pre code {
   padding-right: 0;
   padding-left: 0;
 }
+/* ---------------------------mycode------------------- */
+.project-box{
+  display: block;
+  margin: auto;
+  width: 90%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-family: "Open Sans", sans-serif;
+}
+.image-box{
+  width: 95%;
+ display: block;
+  margin-top: 10px;
+   margin: auto;
+}
+.project-name{
+  margin-top: 10px;
+    font-size: larger;
+  font-weight: bolder;
+}
+.project-body{
+  text-align: left;
+  padding: 10px;
+}
+.tech-stack{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap:5px;
+  margin-left:18px;
+  
+  padding: 5px;
+}
+.project-buton{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 150px;
+  border-radius: 20px;
+  padding: 6px;
+  cursor: none;
+  background-color:#695aa6;
+  color: white;
+  font-size: 13px;
+
+}
+
+.project-last-buttons{
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  
+}
+.project-github-button{
+  border-radius: 5px;
+  padding: 5px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  margin-right: 15px;
+  transition: 200ms;
+}
+.project-github-button:hover{
+ 
+  background-color: rgb(58, 58, 58);
+  width: 110px;
+  
+}
+.project-live-button{
+  border-radius: 5px;
+  padding: 5px;
+  width: 100px;
+margin-left: 15px;
+background-color: rgb(99, 168, 221);
+border: none;
+color: white;
+
+}
+.project-live-button:hover{
+background-color: rgb(151, 193, 225);
+width: 110px;
+  
+
+}
+.project-body{
+  background-color: rgb(194, 217, 232);
+  border-radius: 10px;
+}
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .tech-stack{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:5px;
+    margin-left:28px;
+    
+    padding: 5px;
+  }
+  
+}
+/* tablet */
+@media screen and (min-width:769px) and (max-width: 1023px) {
+  .tech-stack{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:5px;
+    margin-left:28px;
+    
+    padding: 5px;
+  }
+  /* .project-box{
+    background-color: green;
+  } */
+  
+}
+
+/* 480-769 */
+@media screen and (max-width: 768px) {
+  .tech-stack{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:5px;
+    margin-left:28px;
+    
+    padding: 5px;
+  }
+  /* .project-box{
+    background-color: green;
+  } */
+  
+}
+@media screen and (max-width: 468px) {
+  .tech-stack{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:5px;
+    margin-left:28px;
+    
+    padding: 5px;
+  }
+  .project-buton{
+    width: 100px;
+  }
+  /* .project-box{
+    background-color: green;
+  } */
+  
+}
+
+/* -------------------------myend------------------- */
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
@@ -11197,7 +11344,7 @@ p {
   width: 100%;
 }
 
-.portfolio-card .portfolio-card-overlay {
+/* .portfolio-card .portfolio-card-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11215,7 +11362,7 @@ p {
   height: 0;
   border-radius: 50%;
   overflow: hidden;
-}
+} */
 
 @media (prefers-reduced-motion: reduce) {
   .portfolio-card .portfolio-card-overlay {
@@ -12168,17 +12315,21 @@ pre .code {
       -ms-flex-align: center;
           align-items: center;
   text-align: left;
+  
 }
 
 .about-img-holder {
   min-width: 400px;
   max-width: 400px;
   margin-right: 20px;
+  
 }
 
 .about-img-holder .about-img {
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 25%;
+  
 }
 
 .about-caption {
@@ -12186,6 +12337,7 @@ pre .code {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+          
 }
 
 @media (max-width: 767.98px) {
