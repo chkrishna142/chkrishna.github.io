@@ -29,6 +29,45 @@
       src="https://kit.fontawesome.com/ea76035c91.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Include the library. -->
+    <script
+        src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+    </script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+     <script type="text/javascript">
+         (function() {
+             // https://dashboard.emailjs.com/admin/account
+             emailjs.init('uZNwqk_QCN6HHTumW');
+         })();
+     </script>
+     <script type="text/javascript">
+         window.onload = function() {
+             document.getElementById('contact-form').addEventListener('submit', function(event) {
+                 event.preventDefault();
+                 // generate a five digit number for the contact_number variable
+                 this.contact_number.value = Math.random() * 100000 | 0;
+                 // these IDs from the previous steps
+                 emailjs.sendForm('service_vxtxfjd', 'template_u0j1o2z', this)
+                     .then(function() {
+                         console.log('SUCCESS!');
+                         document.getElementById("nameform").innerText="";
+                         document.getElementById("emailform").innerText="";
+                         document.getElementById("comment").innerText="";
+                        
+                        
+                         alert("email sent to chkrishna142@gmail.com");
+                     }, function(error) {
+                         console.log('FAILED...', error);
+                     });
+             });
+         }
+     </script>
+
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <link
+     rel="stylesheet"
+     href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -101,7 +140,7 @@
             <img
               src="./images/[removal.ai]_39cd9203-20ca-4852-b723-b3ef45b18278.png"
               class="about-img"
-              alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+              alt=""
             />
           </div>
           <div class="about-caption">
@@ -155,7 +194,7 @@
               <div class="body">
                 <img
                   src="./images/html.png"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">HTML</h6>
@@ -169,7 +208,7 @@
               <div class="body">
                 <img
                   src="./images/css.png"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">CSS</h6>
@@ -183,7 +222,7 @@
               <div class="body">
                 <img
                   src="./images/js.jpeg"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">JavaScript</h6>
@@ -197,7 +236,7 @@
               <div class="body">
                 <img
                   src="./images/gitimg.png"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">Git/Github</h6>
@@ -211,7 +250,7 @@
               <div class="body">
                 <img
                   src="./images/mongo.png"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">MongoDB</h6>
@@ -225,7 +264,7 @@
               <div class="body">
                 <img
                   src="./images/nodejs.webp"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">NodeJS</h6>
@@ -239,7 +278,7 @@
               <div class="body">
                 <img
                   src="./images/react.png"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">ReactJS</h6>
@@ -253,10 +292,108 @@
               <div class="body">
                 <img
                   src="./images/redux.png"
-                  alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                  alt=""
                   class="icon"
                 />
                 <h6 class="title">Redux</h6>
+                <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
+                                molestias dolorem iste quod.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="body">
+                <img
+                  src="./images/expres.png"
+                  alt=""
+                  class="icon"
+                />
+                <h6 class="title">Express</h6>
+                <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
+                                molestias dolorem iste quod.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="body">
+                <img
+                  src="./images/nextjs.png"
+                  alt=""
+                  class="icon"
+                />
+                <h6 class="title">Next JS</h6>
+                <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
+                                molestias dolorem iste quod.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="body">
+                <img
+                  src="./images/datastructure.png"
+                  alt=""
+                  class="icon"
+                />
+                <h6 class="title">DSA</h6>
+                <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
+                                molestias dolorem iste quod.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="body">
+                <img
+                  src="./images/mongoose.png"
+                  alt=""
+                  class="icon"
+                />
+                <h6 class="title">Mongoose</h6>
+                <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
+                                molestias dolorem iste quod.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="body">
+                <img
+                  src="./images/chakraui.png"
+                  alt=""
+                  class="icon"
+                />
+                <h6 class="title">Chakra UI</h6>
+                <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
+                                molestias dolorem iste quod.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="body">
+                <img
+                  src="./images/npm.png"
+                  alt=""
+                  class="icon"
+                />
+                <h6 class="title">NPM</h6>
+                <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
+                                molestias dolorem iste quod.</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="body">
+                <img
+                  src="./images/posststststs.png"
+                  alt=""
+                  class="icon"
+                />
+                <h6 class="title">Post Man</h6>
                 <!-- <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
                                 molestias dolorem iste quod.</p> -->
               </div>
@@ -282,12 +419,27 @@
               <img
                 src="./images/hotstarhomepg.jpg"
                 class="portfolio-card-img"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                alt=""
               />
             </a>
           </div>
           <div>
             <p class="project-name">Disney+ Hotstar Clone</p>
+            <div class="project-last-buttons">
+              <a
+                href="https://github.com/hero007noob/hotstar-clone"
+                target="_blank"
+              >
+                <button class="project-github-button">
+                  Github &nbsp;<i class="fa-brands fa-github"></i></button
+              ></a>
+              <a href="https://hotstar-tawny.vercel.app/" target="_blank"
+                ><button class="project-live-button">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  &nbsp;Live
+                </button></a
+              >
+            </div>
             <div class="project-body">
               <p>
                 Disney+ Hotstar is an online video streaming platform owned by
@@ -320,23 +472,9 @@
               <button class="project-buton">React</button>
               <button class="project-buton">Redux</button>
               <button class="project-buton">ChakraUi</button>
-              <button class="project-buton">Nodejs</button>
+              
             </div>
-            <div class="project-last-buttons">
-              <a
-                href="https://github.com/hero007noob/hotstar-clone"
-                target="_blank"
-              >
-                <button class="project-github-button">
-                  Github &nbsp;<i class="fa-brands fa-github"></i></button
-              ></a>
-              <a href="https://hotstar-tawny.vercel.app/" target="_blank"
-                ><button class="project-live-button">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  &nbsp;Live
-                </button></a
-              >
-            </div>
+            
           </div>
         </div>
         <div class="project-box">
@@ -345,12 +483,29 @@
               <img
                 src="./images/flipkart.jpg"
                 class="portfolio-card-img"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                alt=""
               />
             </a>
           </div>
           <div>
             <p class="project-name">Flipkart-clone</p>
+            <div class="project-last-buttons">
+              <a
+                href="https://github.com/maharshdhasmana/Flipkart-clone"
+                target="_blank"
+              >
+                <button class="project-github-button">
+                  Github &nbsp;<i class="fa-brands fa-github"></i></button
+              ></a>
+              <a
+                href="https://64257deb9ebe4d009964b37a--taupe-creponne-37abf5.netlify.app/"
+                target="_blank"
+                ><button class="project-live-button">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  &nbsp;Live
+                </button></a
+              >
+            </div>
             <div class="project-body">
               <p>
                 The goal of Flipkart-CLONE was to create a replica of
@@ -380,23 +535,7 @@
               <button class="project-buton">CSS</button>
               <button class="project-buton">JavaScript</button>
             </div>
-            <div class="project-last-buttons">
-              <a
-                href="https://github.com/maharshdhasmana/Flipkart-clone"
-                target="_blank"
-              >
-                <button class="project-github-button">
-                  Github &nbsp;<i class="fa-brands fa-github"></i></button
-              ></a>
-              <a
-                href="https://64257deb9ebe4d009964b37a--taupe-creponne-37abf5.netlify.app/"
-                target="_blank"
-                ><button class="project-live-button">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  &nbsp;Live
-                </button></a
-              >
-            </div>
+           
           </div>
         </div>
         <!-- 2 -->
@@ -406,12 +545,29 @@
               <img
                 src="./images/bewakufcom.jpg"
                 class="portfolio-card-img"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                alt=""
               />
             </a>
           </div>
           <div>
             <p class="project-name">Bewakoof.com Clone</p>
+            <div class="project-last-buttons">
+              <a
+                href="https://github.com/arsh459/ConstructWeekProject_1"
+                target="_blank"
+              >
+                <button class="project-github-button">
+                  Github &nbsp;<i class="fa-brands fa-github"></i></button
+              ></a>
+              <a
+                href="https://magical-creponne-d53ec4.netlify.app/"
+                target="_blank"
+                ><button class="project-live-button">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  &nbsp;Live
+                </button></a
+              >
+            </div>
             <div class="project-body">
               <p>
                 Bewakoof is the fashion e-commerce startup that stands out from
@@ -440,23 +596,7 @@
               <button class="project-buton">CSS</button>
               <button class="project-buton">JavaScript</button>
             </div>
-            <div class="project-last-buttons">
-              <a
-                href="https://github.com/arsh459/ConstructWeekProject_1"
-                target="_blank"
-              >
-                <button class="project-github-button">
-                  Github &nbsp;<i class="fa-brands fa-github"></i></button
-              ></a>
-              <a
-                href="https://magical-creponne-d53ec4.netlify.app/"
-                target="_blank"
-                ><button class="project-live-button">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  &nbsp;Live
-                </button></a
-              >
-            </div>
+           
           </div>
         </div>
         <!-- 3 -->
@@ -490,7 +630,41 @@
               width="100%"
             />
           </div>
+          <div class="pricing-card">
+            <img
+              src="https://camo.githubusercontent.com/92425f4d734645545977a306b09bd8aafe0603b5364145b078517c0c42881ce4/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d63686b726973686e613134322673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374"
+              alt="coding"
+              width="100%"
+            />
+          </div>
+          
         </div>
+        <div class="pricing-wrapper">
+          <!-- <div class="pricing-card">
+            
+              <img
+              src="https://camo.githubusercontent.com/92425f4d734645545977a306b09bd8aafe0603b5364145b078517c0c42881ce4/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d63686b726973686e613134322673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374"
+              alt="coding"
+              width="100%"
+            />
+
+            
+           
+          </div> -->
+          <div class="pricing-card">
+           
+              <div class="calendar">
+                <!-- Loading stuff -->
+                Loading the data just for you.
+            </div>
+            
+
+            
+           
+          </div>
+          
+        </div>
+       
         <!-- end of pricing wrapper -->
       </div>
       <!-- end of container -->
@@ -544,7 +718,7 @@
                   <div class="body">
                     <img
                       src="./images/lilioiiii.png"
-                      alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                      alt=""
                       class="icon"
                     />
                     <h6 class="title">LinkedIn</h6>
@@ -557,8 +731,8 @@
                 <div class="service-card">
                   <div class="body">
                     <img
-                      src="./images/phoneeeeeeeeeeeeeeee.avif"
-                      alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                      src="./images/callnewimag.png"
+                      alt=""
                       class="icon"
                       
                     />
@@ -572,8 +746,8 @@
                 <div class="service-card">
                   <div class="body">
                     <img
-                      src="./images/emaaaaiiiiiiii.jpg"
-                      alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                      src="./images/mailnewlogo.avif"
+                      alt=""
                       class="icon"
                     />
                     <h6 class="title">Email</h6>
@@ -586,8 +760,8 @@
                 <div class="service-card">
                   <div class="body">
                     <img
-                      src="./images/locaaaaa.png"
-                      alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                      src="./images/locationnewimage.png"
+                      alt=""
                       class="icon"
                     />
                     <h6 class="title">Location</h6>
@@ -605,43 +779,47 @@
         </section>
         <!-- ========contacts -->
         <form
-          action="https://formsubmit.co/el/gacaxo"
-          method="POST"
+          id="contact-form"
           class="contact-form col-md-10 col-lg-8 m-auto"
         >
           <div class="form-row">
+            <input type="hidden" name="contact_number">
+            
             <div class="form-group col-sm-6">
               <input
                 type="text"
-                name="Name"
+                name="user_name"
                 size="50"
                 class="form-control"
+                id="nameform"
                 placeholder="Your Name"
-                required
+                
               />
             </div>
             <div class="form-group col-sm-6">
               <input
                 type="email"
                 class="form-control"
+                name="user_email"
+                id="emailform"
                 placeholder="Enter Email"
-                requried
+              
               />
             </div>
             <div class="form-group col-sm-12">
               <textarea
-                name="Message"
+              name="message"
                 id="comment"
                 rows="6"
                 class="form-control"
                 placeholder="Write Something"
                 required
+               
               ></textarea>
             </div>
             <div class="form-group col-sm-12 mt-3">
               <input
-                type="submit"
-                value="Send Message"
+              type="submit" value="Send"
                 class="btn btn-outline-primary rounded"
               />
             </div>

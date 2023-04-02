@@ -620,6 +620,7 @@ pre code {
 .project-box{
   display: block;
   margin: auto;
+  margin-bottom: 50px;
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   font-family: "Open Sans", sans-serif;
@@ -637,7 +638,9 @@ pre code {
 }
 .project-body{
   text-align: left;
-  padding: 10px;
+  margin: auto;
+  width: 92%;
+  padding: 15px;
 }
 .tech-stack{
   display: grid;
@@ -663,7 +666,7 @@ pre code {
 .project-last-buttons{
   margin: auto;
   margin-top: 15px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   
 }
 .project-github-button{
@@ -11434,6 +11437,7 @@ p {
   background: #fff;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
+  
 }
 
 @media (prefers-reduced-motion: reduce) {
