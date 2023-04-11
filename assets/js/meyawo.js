@@ -72,7 +72,7 @@ function Switch_Menu() {
         });
     }
 }
-
-Switch_Menu();
-$(window).resize(function () { Switch_Menu(); });
+$(window).on('load resize', function () { Switch_Menu(); });
+// Switch_Menu();
+// $(window).resize(function () { Switch_Menu(); });
 
