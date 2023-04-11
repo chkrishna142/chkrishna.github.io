@@ -45,7 +45,34 @@ $(document).ready(function () {
 });
 
 // navbar toggle
-$('#nav-toggle').click(function () {
-    $(this).toggleClass('is-active')
-    $('ul.nav').toggleClass('show');
-});
+
+
+
+
+
+function Switch_Menu() {
+    if ($(window).width() > 991) {
+        navi();
+        function navi() {
+            $(this).toggleClass('is-active')
+            $('ul.nav').toggleClass('show');
+        }
+
+
+        //function 1 is called
+        //where some objects on the page get hidden, some get resized
+    }
+    else {
+        //function 2 is called
+        ////where some objects on the page get hidden, some get resized
+
+        $('#nav-toggle').click(function () {
+            $(this).toggleClass('is-active')
+            $('ul.nav').toggleClass('show');
+        });
+    }
+}
+
+Switch_Menu();
+$(window).resize(function () { Switch_Menu(); });
+
